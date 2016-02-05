@@ -1,0 +1,51 @@
+===COMMANDS===
+Compile to .dvi:
+latex <filename>
+
+Open .dvi:
+xdvi <dvi filename> &
+[note this will stay open and update when re-compiling]
+
+Create pdf:
+pdflatex <filename>
+
+
+
+===REFERENCES====
+https://www.maths.tcd.ie/~dwilkins/LaTeXPrimer/
+https://wch.github.io/latexsheet/latexsheet-0.png
+https://wch.github.io/latexsheet/latexsheet-1.png
+
+
+
+===NOTES===
+From http://stackoverflow.com/questions/1017055/get-started-with-latex-on-linux
+-Use tools such as xfig or dia to create diagrams.
+These can be easily inserted into your documents in a
+variety of formats. Note that if you are creating PDFs
+then you shouldn't use EPS (encapsulated postscript)
+for images
+
+-Use pdf exported from your diagram editor if possible,
+or you can use the epstopdf package to automatically
+convert from (e)ps to pdf for figures included with
+\includegraphics.
+
+-Start using version control on your documents. This
+seems excessive at first, but being able to go back
+and look at earlier versions when you are writing
+something large can be extremely useful.
+
+-Use make to run latex for you. When you start on
+having bibliographies, images and other more complex
+uses of latex you'll find that you need to run it
+over multiple files or multiple times (the first time
+updates the references, and the second puts references
+into the document, so they can be out-of-date unless
+you run latex twice...). Abstracting this into a
+makefile can save a lot of time and effort.
+
+-Use a better editor. Something like Emacs + AUCTeX
+is highly competent. This is of course a highly
+subjective subject, so I'll leave it at that (that
+and that Emacs is clearly the best option :)
