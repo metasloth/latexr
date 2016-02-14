@@ -1,21 +1,12 @@
 ===COMMANDS===
-Compile to .dvi:
-latex <filename>
-
-Open .dvi:
-xdvi <dvi filename> &
-[note this will stay open and update when re-compiling]
-
-Create pdf:
+latex <filename> -- creates dvi
+xdvi <dvi filename> & -- opens live dvi
 pdflatex <filename>
+tlmgr install
+tlmgr remove
 
-
-
-===REFERENCES====
-https://www.maths.tcd.ie/~dwilkins/LaTeXPrimer/
-https://wch.github.io/latexsheet/latexsheet-0.png
-https://wch.github.io/latexsheet/latexsheet-1.png
-
+===SYNTAX===
+Comment Block: \begin{comment} Commented code \end{comment}
 
 
 ===NOTES===
@@ -31,10 +22,7 @@ or you can use the epstopdf package to automatically
 convert from (e)ps to pdf for figures included with
 \includegraphics.
 
--Start using version control on your documents. This
-seems excessive at first, but being able to go back
-and look at earlier versions when you are writing
-something large can be extremely useful.
+-Start using version control on your documents.
 
 -Use make to run latex for you. When you start on
 having bibliographies, images and other more complex
@@ -45,7 +33,9 @@ into the document, so they can be out-of-date unless
 you run latex twice...). Abstracting this into a
 makefile can save a lot of time and effort.
 
--Use a better editor. Something like Emacs + AUCTeX
-is highly competent. This is of course a highly
-subjective subject, so I'll leave it at that (that
-and that Emacs is clearly the best option :)
+
+===REFERENCES====
+https://www.maths.tcd.ie/~dwilkins/LaTeXPrimer/
+https://wch.github.io/latexsheet/latexsheet-0.png
+https://wch.github.io/latexsheet/latexsheet-1.png
+https://oeis.org/wiki/List_of_LaTeX_mathematical_symbols
