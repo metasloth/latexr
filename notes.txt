@@ -7,7 +7,7 @@ tlmgr remove
 
 ===SYNTAX===
 Comment Block: \begin{comment} Commented code \end{comment}
-
+random text for git
 
 ===NOTES===
 From http://stackoverflow.com/questions/1017055/get-started-with-latex-on-linux
