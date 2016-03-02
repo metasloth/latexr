@@ -1,48 +1,59 @@
-\documentclass[letterpaper,12pt]{article}
-
-\usepackage[margin=0.5in]{geometry}
+\documentclass[letterpaper,10pt]{article}
+\usepackage[pass]{geometry}
 \usepackage{commath}
 \usepackage{amsfonts}
-
-\author{Sam Hemann}
-\title{MATH 201 Homework ##5}
-\date{2/11/2016}
-
+\usepackage{amsmath}
+\linespread{1.25}
 \begin{document}
-% \maketitle
-\newcommand{\N}{\mathbb{N}}
-\newcommand{\Z}{\mathbb{Z}}
 
-\section*{Chapter 2.10}
+\center{\bf MATHEMATICS 201-C (SPRING 2016): QUIZ 7}
+\flushleft
+~~1. (5 points) The following statement is either true or false. If the statement is
+true, then prove it. If the statement is false, then disprove it.
+\center{
+For every natural number $n$, the integer $2n^{2}-4n+31$ is prime.
+}
+\flushleft
+This is flase. \\
+\emph{Disproof.} Let $n=31$. Note that $2(31)^{2}-4(31)+31=1829$, and that
+$31\mid1829$. Hence, $2n^{2}-4n + 31$ is not prime when $n=31$, so
+the statement is false.
+\newline
 
-% Problem 3
-\paragraph{\bf
-  3. Negate the statement "For every prime number $p$, there
-  is another prime $q$ such that $q > p$."
+~~2. (5 points) Prove the following statement with either induction, strong
+induction or proof by smallest counterexample.
+\center{
+    \small
+    For every integer $n \in \mathbb{N} $, it follows that $1^{2} + 2^{2} +
+    3^{2} +\ldots+ n^{2} =$\(\displaystyle \frac{n(n + 1)(2n + 1)}{6}\)
 }
-\subparagraph{\normalfont
-  There exists a prime number $p$ for which all prime numbers $q$
-  satisfy $q \leq p$.
-}
+\flushleft
+\emph{Proof.} We will use mathematical induction to prove this. \\
+~~~~First, let $n=1$. Note that $1^{2} =$
+    \(\ \frac{(1)((1) + 1)(2(1) + 1)}{6} = 1\). Hence,
+    $1^{2} + 2^{2} + 3^{2} +\ldots+ k^{2} =$\(\ \frac{k
+    (k + 1)(2k + 1)}{6}\) is true for $k = 1$. \\
+~~~~Next we will prove that for any integer $k \geq 1$, $S_{k} \implies S_{k+1}$.
+    In other words, we mush show that if $1^{2} + 2^{2} + 3^{2} +\ldots+ k^{2} =$
+    \(\ \frac{k(k + 1)(2k + 1)}{6}\) is true, then \center{ $1^{2} + 2^{2} + 3^{2} +\ldots+
+    k^{2}+(k+1)^{2} =$ \(\displaystyle \frac{(k+1)((k+1) + 1)(2(k+1) + 1)}{6}\)}
+    \flushleft is also true. Note that\[
+        1^{2} + 2^{2} + 3^{2} + \ldots +k^{2}+(k+1)^{2} =
+        (1^{2} + 2^{2} + 3^{2} +\ldots+k^{2})+(k+1)^{2}. \]
+        If we substitute $S_k$ into this equation we now have
+    \begin{align*}
+        \frac{k(k + 1)(2k + 1)}{6} + (k+1)^{2} &=
+        \frac{(k+1)((k+1) + 1)(2(k+1) + 1)}{6} \\
+        ~ &= \frac{(k^{2}+3k+2)(2k+3)}{6} \\
+        ~ &= \frac{2k^{3}+6k^{2}+4k+3k^{2}+9k+6}{6} \\
+        ~ &= \frac{2k^{3}+3k^{2}+k}{6}+\frac{6k^{2}+12k+6}{6} \\
+        ~ &= \frac{k(2k^{2}+3k+1)}{6}+\frac{6(k+1)^{2}}{6} \\
+        ~ &= \frac{k(k+1)(2k+1)}{6}+(k+1)^{2}.
+    \end{align*}
+T~~~~herefore, $1^{2} + 2^{2} + 3^{2} +\ldots+
+k^{2}+(k+1)^{2} = \frac{(k+1)((k+1) + 1)(2(k+1) + 1)}{6}$, which
+means the statement is true for all $n=k+1$.
 
-% Problem 4
-\paragraph{\bf
-  4. Negate the statement: "For every positive number $\epsilon$, there
-  is a positive number $\sigma$ such that $\abs{x-a} \Rightarrow
-  \abs{f(x)-f(a)}$."
-}
-\subparagraph{\normalfont
-  There exists a prime number $p$ for which all prime numbers $q$ satisfy
-  $q \leq p$.
-}
 
-%Made up problem
-\paragraph{\normalfont
-  23. Prove that for every $a$, $b$ $\in \Z$ and $n \in \N$, $a^{3} \equiv
-  b^{3} (mod$ $ n)$.
-}
-\subparagraph{\normalfont
-  woot.
-}
 
 \end{document}
